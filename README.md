@@ -7,3 +7,4 @@ React.js
 hardhat
 Twilio
 CockroachDB
+OpenZepplin(to make an ethereum contract in ERC721)
