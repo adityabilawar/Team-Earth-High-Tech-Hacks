@@ -1,7 +1,7 @@
 
 
 
-# Team EAARTH Learning NFTs High Tech Hacks
+# Team EARTH Learning NFTs High Tech Hacks
 
 Learning NFTs is a web application that assists and educates students to create their very own non-fungible token!
 "Helping students learn how to create and sell NFTs with an easy to use and create minting software that deploys NFTs onto DeSo Diamond." - Derek, Aditya, and Nithin 
