@@ -1,19 +1,20 @@
-Learning NFTs
 
-Helping students learn how to create and sell NFTs with an easy to use and create minting software that deploys NFTs onto DeSo Diamond.
-
-Technologies used:
-React.js
-hardhat
-Twilio
-CockroachDB
-OpenZepplin(to make an ethereum contract in ERC721)
 
 
 # Team EAARTH Learning NFTs High Tech Hacks
 
 Learning NFTs is a web application that assists and educates students to create their very own non-fungible token!
 "Helping students learn how to create and sell NFTs with an easy to use and create minting software that deploys NFTs onto DeSo Diamond." - Derek, Aditya, and Nithin 
+
+##Technologies used:
+vite vanilla js
+hardhat
+Twilio Sendgrid(to send a conformation code for when the user is logging in)
+CockroachDB(yo store user data onto our database)
+OpenZepplin(to make an ethereum contract in ERC721)
+DeSo protocol API
+python 
+sol
 
 ## Installation & Dependencies 
 - Download node on website 
@@ -46,3 +47,4 @@ npm run dev
 ## Authors
 - Aditya Bilawar
 - Derek Sheen
+- Nithin Pillai
