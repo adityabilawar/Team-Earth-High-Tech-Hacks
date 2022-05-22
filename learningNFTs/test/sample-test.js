@@ -3,8 +3,8 @@ const { ethers } = require("hardhat");
 
 describe("LearningNFT", function (){
     it("Should be able to mint if needed and give the NFT to the other user", async function() {
-        const LearnNFT = await ethers.getContractFactory("LearnNFTs");
-        const learnnfts = await LearnNFT.deploy();
+        const LearningNFTs = await ethers.getContractFactory("LearningNFTs");
+        const learnnfts = await LearningNFTs.deploy();
         await learnnfts.deployed();
 
         const recipient = '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266';
@@ -13,7 +13,7 @@ describe("LearningNFT", function (){
         let balance = await learnnfts.balanceOf(recipient);
         expect(balance).to.equal(0);
 
-        const thelatestMintedToken = await learnnfts.payToMint(recipient, metadatraURI, { value: ethers.utils.parseEther('0.069')});
+        const thelatestMintedToken = await learnnfts.payToHaveNFTMinted(recipient, metadataURI, { value: ethers.utils.parseEther('0.69')});
     });
 });
 
