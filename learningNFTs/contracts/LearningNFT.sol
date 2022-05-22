@@ -11,6 +11,8 @@ contract LearningNFTs is ERC721, ERC721URIStorage, Ownable {
 
     Counters.Counter private _tokenIdCounter;
 
+    mapping(string => uint8) existingURIs;
+
     constructor() ERC721("LearningNFTs", "LFT") {}
 
     function _baseURI() internal pure override returns (string memory) {
@@ -39,7 +41,27 @@ contract LearningNFTs is ERC721, ERC721URIStorage, Ownable {
         return super.tokenURI(tokenId);
     }
 
-    function payToMint(address recipient, string memory metadataURI){
-        
+    function count() public view returns(uint256){
+        return _tokenIdCounter.current();
     }
+
+    function payToHaveNFTMinted(address recipient, string memory metadataURI) payable returns(uint256){
+         require(existingURIs[metadataURI] != 1, 'this NFT has already been minted! Please be careful next time!');
+         require (msg.value >= 0.05 ether, 'You have to pay a higher price!!!!!! heheheHa');
+
+         uint ItemIDLearningNFT = _tokenIdCounter.current();
+         _tokenIdCounter.increment();
+         existingURIs[metadataURI] = 1;
+
+         _mint(recipient, ItemIDLearningNFT);
+        _setTokenURI(ItemIDLearningNFT, metadataURI);
+
+        return ItemIDLearningNFT;
+    }
+    function whetherNFTIsHasOwner(string memory uri) public view returns (bool){
+        return existingURIs[uri] == 1;
+
+    }
+
+     
 }
