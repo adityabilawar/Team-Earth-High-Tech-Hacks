@@ -1,14 +1,14 @@
 console.log(randomNumber());
 
-const API_KEY = 'laksjdflas';
+const API_KEY = 'process.env.API_KEY';
 
 const sg = require('@sendgrid/mail');
 sg.setApiKey(API_KEY);
 
 const message = {
-    to: 'asdfsdfsd',
-    from: 'asdfsdfsd',
-    subject: 'EARTH MESSAGE',
+    to: emailInput.value,
+    from: '23ab1107@wwprsd.org',
+    subject: 'Learn NFT Verification Code',
     text: '' + randomNumber(),
 
 };

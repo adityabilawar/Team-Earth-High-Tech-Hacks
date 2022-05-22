@@ -13,7 +13,13 @@ describe("LearningNFT", function (){
         let balance = await learnnfts.balanceOf(recipient);
         expect(balance).to.equal(0);
 
-        const thelatestMintedToken = await learnnfts.payToHaveNFTMinted(recipient, metadataURI, { value: ethers.utils.parseEther('0.69')});
+        const thelatestMintedToken = await learnnfts.payToHaveNFTMinted(recipient, metadataURI, { value: ethers.utils.parseEther('0. 05')});
+
+        // await for when the transaction is mined
+        await newlyMintedToken.wait();
+
+        balance = await learnnfts.balanceOf(recipient)
+        expect(balance).to.equal(1);
     });
 });
 
