@@ -45,7 +45,7 @@ contract LearningNFTs is ERC721, ERC721URIStorage, Ownable {
         return _tokenIdCounter.current();
     }
 
-    function payToHaveNFTMinted(address recipient, string memory metadataURI) payable returns(uint256){
+    function payToHaveNFTMinted(address recipient, string memory metadataURI) public payable returns(uint256){
          require(existingURIs[metadataURI] != 1, 'this NFT has already been minted! Please be careful next time!');
          require (msg.value >= 0.05 ether, 'You have to pay a higher price!!!!!! heheheHa');
 
