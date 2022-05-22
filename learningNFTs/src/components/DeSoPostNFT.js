@@ -1,4 +1,15 @@
 import Deso from 'deso-protocol';
+
+const login   = window.open('https://identity.deso.org/log-in');
+const signUp  = window.open('https://identity.deso.org/sign-up');
+const logout  = window.open('https://identity.deso.org/logout?publicKey=BC123...');
+const approve = window.open('https://identity.deso.org/approve?tx=0abf35a...');
+
+// Can be added to any path for testnet deso and bitcoin addresses
+const testnet = window.open('https://identity.deso.org/log-in?testnet=true');
+
+
+
 const deso = new Deso();
 const request = {
   "UpdaterPublicKeyBase58Check": null,
